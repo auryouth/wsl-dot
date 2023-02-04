@@ -1,0 +1,43 @@
+#!/bin/bash
+if [ ! -d  "${HOME}/.config/lock" ];then
+    mkdir "${HOME}/.config/lock"
+fi
+
+MUTEX="${HOME}/.config/lock/arch-lock"
+LOG="${HOME}/.config/lock/lock-log"
+NOLOCK="${HOME}/.config/lock/NOLOCK"
+wallpapers_path="${HOME}/.dotfiles/wallpaper"
+img=$(find "$wallpapers_path" -type f -not -path "$wallpapers_path/.git*" | shuf -n 1) 
+
+VERSION="0.5"
+
+log () {
+	when=$(date "+%Y-%m-%d %H:%M:%S")
+	msg="[lock ${VERSION}] ${when} $1"
+	echo "${msg}" >> "${LOG}"
+}
+
+lock () {
+	if [ ! -f "${NOLOCK}" ]; then
+		swaylock -F -l -i "$img"
+	else
+		log "${NOLOCK} found, not locking"
+	fi
+}
+
+if [ "$1" = force ]; then
+	log "Forcing lock, removing ${NOLOCK} and ${MUTEX}"
+	rm -rf "${NOLOCK}"
+	rm -rf "${MUTEX}"
+fi
+
+if /bin/mkdir "$MUTEX" || [ -d "$MUTEX" ]; then
+	log "Successfully acquired lock"
+
+	trap 'rm -rf "$MUTEX"' 0	# remove mutex when script finishes
+
+	lock
+else
+	log "cannot acquire lock, giving up on $MUTEX"
+	exit 0
+fi

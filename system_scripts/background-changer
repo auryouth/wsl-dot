@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+wallpapers_path="${HOME}/.dotfiles/wallpaper"
+
+swaybg -i $(find $wallpapers_path -type f -not -path "$wallpapers_path/.git*" | shuf -n 1) -m fill

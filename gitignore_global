@@ -1,0 +1,44 @@
+# Compiled source #
+###################
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# Editing tools and IDEs #
+##########################
+[._]*.sw[a-p]
+[._]*.s[a-v][a-z]
+*~
+~*
+\#*\#
+\.#*
+.ipynb_checkpoints/
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+mpd/log
+mpd/pid
+mpd/state
+shell/zsh/.zcompdump
+Thunar/accels.scm
+fcitx5/conf/cached_layouts
+pkglist/pkglist_remove.txt
+pkglist/pkglist_add.txt
+nvim/lazy-lock.json
