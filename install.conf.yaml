@@ -1,0 +1,17 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+- clean: ["~", "~/.config"]
+- link:
+    ~/.config/fzf:
+    ~/.config/paru:
+    ~/.config/clangd:
+    ~/.config/shell:
+    ~/.config/nvim:
+    ~/.gitconfig:
+    ~/.zshenv:
+    ~/bin:
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

@@ -1,0 +1,5 @@
+Thunar/accels.scm
+fcitx5/conf/cached_layouts
+pkglist/pkglist_remove.txt
+pkglist/pkglist_add.txt
+nvim/lazy-lock.json

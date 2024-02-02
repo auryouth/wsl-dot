@@ -1,0 +1,19 @@
+[submodule "shell/plugins/dircolors-solarized"]
+	path = shell/plugins/dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized
+[submodule "shell/plugins/zsh-syntax-highlighting"]
+	path = shell/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "shell/plugins/zsh-completions"]
+	path = shell/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule "shell/plugins/zsh-autosuggestions"]
+	path = shell/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "nvim"]
+	path = nvim
+	url = git@github.com:auryouth/nvim.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
