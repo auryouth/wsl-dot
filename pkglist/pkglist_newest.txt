@@ -20,5 +20,6 @@ paru
 ripgrep
 unzip
 wget
+wl-clipboard
 yazi
 zsh

@@ -30,6 +30,7 @@ dbus
 dbus-broker
 dbus-broker-units
 debugedit
+default-cursors
 device-mapper
 diffutils
 dnssec-anchors
@@ -192,8 +193,10 @@ unibilium
 unzip
 util-linux
 util-linux-libs
+wayland
 wget
 which
+wl-clipboard
 xz
 yazi
 zlib
