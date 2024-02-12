@@ -22,7 +22,7 @@ cd "$(dirname "$0")" || exit 1
 
 # Install `paru` first to avoid some problems
 Parent_thread "Install AUR helper"
-sudo pacman -S --needed paru-git
+sudo pacman -S --needed paru
 
 # Check pkglist file
 pkglist_newest="../pkglist_newest.txt"
@@ -85,7 +85,6 @@ while true; do
 		;;
 	esac
 done
-
 
 # Clone dotfiles
 Child_thread "Clone dotfile"
